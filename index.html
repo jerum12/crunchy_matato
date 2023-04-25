@@ -62,10 +62,55 @@
     <div class="navbar-area">
       <div class="crunchy-mutato-responsive-nav">
         <div class="container">
-          <div class="crunchy-mutato-responsive-menu">
+          <div class="crunchy-mutato-responsive-menu" style="display: flex">
             <div class="logo">
               <a href="index.html">
                 <img src="assets/img/logo-no-background.png" alt="logo" />
+              </a>
+            </div>
+            <div
+              class="cart-btn"
+              style="
+                width: 34px;
+                height: 34px;
+                line-height: 34px;
+                border: 1px solid #b7b7b7;
+                cursor: pointer;
+                color: #b7b7b7;
+                margin-left: 10px;
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                top: 1px;
+                text-align: center;
+                border-radius: 5px;
+                -webkit-transition: 0.6s;
+                transition: 0.6s;
+                align-self: center;
+              "
+            >
+              <a href="#" style="position: relative">
+                <i class="fa fa-shopping-cart"></i>
+                <span
+                  id="cart-quantity-mobile"
+                  style="
+                    position: absolute;
+                    right: -5px;
+                    bottom: 12px;
+                    width: 12px;
+                    height: 12px;
+                    text-align: center;
+                    line-height: 12px;
+                    border-radius: 50%;
+                    background: #209e2e;
+                    color: #ffffff;
+                    font-size: 10px;
+                    font-weight: 400;
+                    -webkit-transition: 0.6s;
+                    transition: 0.6s;
+                  "
+                  >0</span
+                >
               </a>
             </div>
           </div>
@@ -1187,10 +1232,12 @@
         var deleteRow = '';
 
         let element = document.getElementById('cart-quantity');
+        let element2 = document.getElementById('cart-quantity-mobile');
         let q = CartData.length;
 
         console.log(q);
         element.innerHTML = q;
+        element2.innerHTML = q;
 
         $.toast({
           type: 'SUCCESS',
